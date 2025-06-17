@@ -1,0 +1,62 @@
+body {
+  background-color: black;
+}
+
+.header-bar {
+  background-color: grey;
+  padding: 20px 0;
+}
+
+.img-placeholder {
+  background-color: lightgrey;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.content-section {
+  padding: 20px;
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 576px) {
+  .img-placeholder {
+    height: 100px;
+    font-size: 1rem;
+  }
+  .header-bar {
+    padding: 15px 0;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+body {
+  background-color: #121212;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header-bar {
+  padding: 20px;
+}
+
+.img-placeholder {
+  background-color: #ccc;
+  padding: 40px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.navbar .btn {
+  font-weight: bold;
+}
