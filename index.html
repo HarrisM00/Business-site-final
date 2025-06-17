@@ -1,103 +1,62 @@
-<!--
-✅ Testing Report
-
-✔ Tested on:
-- Chrome (desktop & mobile)
-- Firefox (desktop)
-- Safari (iPhone)
-- Android Chrome browser
-
-🐞 Bugs/Issues Found:
-1. Navbar collapse didn't work on small screens (fixed by adding toggler button)
-2. Light/Dark mode toggle doesn't persist between pages
-
-🔧 Debugging Strategies:
-- Used Chrome DevTools to simulate screen sizes and inspect elements
-- Used console.log() to test JavaScript functionality
-- Verified class toggling manually using the DevTools inspector
-
-🛠 Remaining Issues & Next Steps:
-- Implement localStorage for Light/Dark mode across all pages
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio - Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sure Shot Pest Control</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Harris Mahmood</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <span class="brand-text">SURE <span class="text-black">SHOT</span><br><small>PEST CTRL.</small></span>
+        <img src="https://i.imgur.com/hQ6Sk1z.png" alt="Logo" class="logo-img ms-2" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item"><a class="btn btn-light m-1" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="btn btn-light m-1" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="btn btn-light m-1" href="About me.html">About Me</a></li>
-          <li class="nav-item">
-            <button id="modeToggle" class="btn btn-secondary m-1">Toggle Light/Dark</button>
-          </li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="online payment.html">Online Payment</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Header Section -->
-  <div class="header-bar text-center my-4">
-    <h2 class="text-success">HEADING</h2>
-  </div>
-
-  <!-- Image Grid --> 
-  <div class="container-fluid content-section">
-    <div class="row justify-content-center">
-      <div class="col-md-5 m-3 image-box text-center">
-        <div class="img-placeholder">IMAGE</div>
-      </div>
-      <div class="col-md-5 m-3 image-box text-center">
-        <div class="img-placeholder">IMAGE</div>
+  <!-- Main Content -->
+  <main class="bg-page py-5">
+    <div class="container bg-white p-4 shadow-lg">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h5 class="text-center fw-bold">WELCOME TO SURE SHOT PEST CONTROL</h5>
+          <p class="mt-3">
+            For Over 25 years Sure Shot Pest Control has been America's leading provider of Pest Control services.
+            After two decades in Pest Control industry we are now setting higher standards in providing pest control
+            services to our valued customers. Our operations include Pest, Odor, Hygiene and Sanitation control
+            services for residential, commercial and industrial markets.
+          </p>
+        </div>
+        <div class="col-md-5 text-center mt-4 mt-md-0">
+          <img src="https://i.imgur.com/zFz1O1E.png" alt="Pest Control Graphic" class="img-fluid border" />
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer class="footer-bar text-white d-flex justify-content-between align-items-center px-4 py-3">
+    <div>267 Amboy Avenue<br>Woodbridge, NJ 07095</div>
+    <div class="fw-bold">732-321-3666</div>
+  </footer>
 
-  <!-- Light/Dark Mode Script -->
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
-
-      // Save user preference
-      const mode = document.body.classList.contains("light-mode") ? "light" : "dark";
-      localStorage.setItem("mode", mode);
-    }
-
-    window.onload = function () {
-      const savedMode = localStorage.getItem("mode");
-      if (savedMode === "light") {
-        document.body.classList.add("light-mode");
-      }
-      document.getElementById("modeToggle").addEventListener("click", toggleMode);
-    };
-  </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
