@@ -1,58 +1,75 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .bg-page {
-    background-color: #d3d3d3;
-  }
-  
-  .custom-navbar {
-    background-color: #e60000;
-  }
-  
-  .logo-img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
-  
-  .custom-navbar .nav-link {
-    color: black;
-    font-weight: bold;
-    margin-right: 8px;
-    background-color: #ff4d4d;
-    padding: 5px 12px;
-    border: 1px solid black;
-    box-shadow: 2px 2px 0 black;
-    transition: all 0.2s;
-  }
-  
-  .custom-navbar .nav-link:hover {
-    background-color: black;
-    color: white;
-    box-shadow: none;
-  }
-  
-  .footer-bar {
-    background-color: #e60000;
-    font-size: 0.95rem;
-  }
-  
-  .brand-text {
-    line-height: 1.1;
-  }
- 
-  html, body {
-  height: 100%;
-  margin: 0;
-}
+/* styles.css */
 
+/* Reset & base */
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
+  background-color: #d3d3d3;
 }
 
 main {
-  flex: 1; /* grows to fill space */
+  flex: 1; /* grow to fill available space */
+}
+
+/* Navbar */
+.custom-navbar {
+  background-color: #e60000;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand-text {
+  line-height: 1.1;
+  color: white;
+}
+
+.custom-navbar .nav-link {
+  color: black;
+  font-weight: bold;
+  margin-right: 8px;
+  background-color: #ff4d4d;
+  padding: 5px 12px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 0 black;
+  transition: all 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  background-color: black;
+  color: white;
+  box-shadow: none;
+}
+
+/* Header */
+.bg-gradient {
+  background: linear-gradient(45deg, #e60000, #ff4d4d);
+}
+
+/* Form container */
+.container.bg-white {
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer-bar {
+  background-color: #e60000;
+  font-size: 0.95rem;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .custom-navbar .nav-link {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
 }
